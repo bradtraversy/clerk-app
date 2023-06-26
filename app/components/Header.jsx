@@ -3,23 +3,23 @@ import { UserButton } from '@clerk/nextjs';
 
 const Header = ({ username }) => {
   return (
-    <nav className='bg-blue-700 py-4 px-6 flex items-center justify-between mb-5'>
+    <nav className='flex items-center justify-between px-6 py-4 mb-5 bg-blue-700'>
       <div className='flex items-center'>
         <Link href='/'>
-          <div className='text-lg uppercase font-bold text-white'>
+          <div className='text-lg font-bold text-white uppercase'>
             Clerk App
           </div>
         </Link>
       </div>
-      <div className='text-white flex items-center'>
-        <Link href='sign-in' className='text-gray-300 hover:text-white mr-4'>
+      <div className='flex items-center text-white'>
+        <Link href='sign-in' className='mr-4 text-gray-300 hover:text-white'>
           Sign In
         </Link>
-        <Link href='sign-up' className='text-gray-300 hover:text-white mr-4'>
+        <Link href='sign-up' className='mr-4 text-gray-300 hover:text-white'>
           Sign Up
         </Link>
         <div className='ml-auto'>
-          <UserButton />
+          <UserButton afterSignOutUrl='/' />
         </div>
       </div>
     </nav>
